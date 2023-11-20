@@ -4,16 +4,24 @@
 #include <iostream>
 using namespace std;
 
+struct Vector
+{
+    float x, y, z;
+};
+
+struct Player
+{
+    string name;
+    int hp;
+    Vector position;
+};
+
 int main()
 {
-    std::cout << "Hello World!\n";
-    cout << "I am now a C++ programmer." << endl;
-    int x = 4;
-    x += 4;
-    cout << "x = " << x << endl;
-    x = 9;
-    x -= 2;
-    cout << "x = " << x << endl;
+    Player me;
+    me.name = "John";
+    me.hp = 100;
+    me.position.x = me.position.y = me.position.z = 0;
     return 0;
 }
 
