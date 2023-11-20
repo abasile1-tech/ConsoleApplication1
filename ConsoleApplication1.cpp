@@ -53,5 +53,33 @@ int main()
 
     cout << directRefToJohn.name << endl; // John
 
+    cout << "What is your name?" << endl;
+
+    Player newPlayer;
+
+    cin >> newPlayer.name;
+
+    cout << "What is your current x position?" << endl;
+
+    cin >> newPlayer.position.x;
+
+    cout << "What is your current y position?" << endl;
+
+    cin >> newPlayer.position.y;
+
+    cout << "What is your current z position?" << endl;
+
+    cin >> newPlayer.position.z;
+
+    cout << "What is your current hp?" << endl;
+
+    cin >> newPlayer.hp;
+
+    cout << "Here is what you told me about yourself: " << endl;
+
+    cout << "Name: " << newPlayer.name << endl;
+    cout << "Position (x,y,z): " << newPlayer.position.x << ", " << newPlayer.position.y << ", " << newPlayer.position.z << endl;
+    cout << "HP: " << newPlayer.hp;
+
     return 0;
 }
