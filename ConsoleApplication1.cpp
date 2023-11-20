@@ -1,6 +1,3 @@
-// ConsoleApplication1.cpp : This file contains the 'main' function. Program execution begins and ends there.
-//
-
 #include <iostream>
 using namespace std;
 
@@ -18,20 +15,26 @@ struct Player
 
 int main()
 {
-    Player me;
-    me.name = "John";
-    me.hp = 100;
-    me.position.x = me.position.y = me.position.z = 0;
+    Player john;
+    john.name = "John";
+    john.hp = 100;
+    john.position.x = john.position.y = john.position.z = 0;
+
+    Player* ptrToJohn; // Declaring a new variable called ptrToJohn as a pointer of Type Player. 
+    // As a pointer of Type player, it will be able to hold (as it's value), but won't yet hold, an address in
+    // memory to a Player object
+
+    ptrToJohn = &john; // Assigning the value of ptrToJohn equal to a reference to the john object
+    // this effectively stores the address in memory of the john object as the value of the ptrToJohn variable.
+
+    cout << john.hp << endl; // 100
+    
+    ptrToJohn->hp -= 33; // because ptrToJohn stores (as its value) the address in memory of the john object, 
+    // changing it's values actually change the values of the john object
+    // in this way, ptrToJohn is an actual reference to john, not a mere copy.
+
+    cout << john.hp << endl; // 67
+
+
     return 0;
 }
-
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
-
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
