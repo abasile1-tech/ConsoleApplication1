@@ -75,11 +75,12 @@ int main()
 
     cin >> newPlayer.hp;
 
-    cout << "Here is what you told me about yourself: " << endl;
+    // cout << "Here is what you told me about yourself: " << endl;
 
-    cout << "Name: " << newPlayer.name << endl;
-    cout << "Position (x,y,z): " << newPlayer.position.x << ", " << newPlayer.position.y << ", " << newPlayer.position.z << endl;
-    cout << "HP: " << newPlayer.hp;
+    // cout << "Name: " << newPlayer.name << endl;
+    //cout << "Position (x,y,z): " << newPlayer.position.x << ", " << newPlayer.position.y << ", " << newPlayer.position.z << endl;
+    printf("Here is what you told me about yourself:\nName: %s\nPosition (x,y,z): %f, %f, %f\nHP: %d\n", newPlayer.name.c_str(), newPlayer.position.x, newPlayer.position.y, newPlayer.position.z, newPlayer.hp);
+    // cout << "HP: " << newPlayer.hp;
 
     return 0;
 }
