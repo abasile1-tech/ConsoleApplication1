@@ -20,7 +20,8 @@ int main()
     john.hp = 100;
     john.position.x = john.position.y = john.position.z = 0;
 
-    Player* ptrToJohn; // Declaring a new variable called ptrToJohn as a pointer of Type Player. 
+    Player* ptrToJohn = 0; // Declaring a new variable called ptrToJohn as a pointer of Type Player. 
+    // Initialized as 0 (null) to give a null pointer exception if used before being assigned a real value
     // As a pointer of Type player, it will be able to hold (as it's value), but won't yet hold, an address in
     // memory to a Player object
     // Player* can be explained. The * means that it is a pointer holding a memory address 
